@@ -1,5 +1,9 @@
 package com.dct.gtdorganizer;
 
+import java.util.ArrayList;
+
+import org.json.simple.JSONArray;
+
 class Column {
     ArrayList<Task> tasks;
     String name;
@@ -36,6 +40,20 @@ class Column {
      */
     void delete(Task task) {
         tasks.remove(task);
+    }
+
+    /**
+     * Returns a JSONArray with the data of the contained tasks as entries.
+     * 
+     * @return Returns a JSONArray with the data of the contained tasks as entries.
+     */
+
+    JSONArray save() {
+        JSONArray jarr = new JSONArray();
+        for (Task task : tasks) {
+            jarr.add(task.save());
+        }
+        return jarr;
     }
 
 }

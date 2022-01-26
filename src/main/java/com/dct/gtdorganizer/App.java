@@ -1,9 +1,5 @@
 package com.dct.gtdorganizer;
 
-/**
- * Hello world!
- *
- */
 public class App {
     public static void main(String[] args) {
         Column[] columns = { new Column("Next Steps"),

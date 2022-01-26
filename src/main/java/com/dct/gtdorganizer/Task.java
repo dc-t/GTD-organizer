@@ -1,5 +1,7 @@
 package com.dct.gtdorganizer;
 
+import java.util.Map;
+
 class Task {
     String name;
     String body;
@@ -15,13 +17,20 @@ class Task {
     }
 
     /**
-     * Prints the name and body to system out.
+     * Prints the Task to system out.
      */
     void expand() {
-        System.out.print(name + "\n\n" + body + "\n");
+        System.out.print(name + "\n\n" + body);
     }
 
-    JSONObject save(){
+    // TODO default implementation?
 
+    /**
+     * Returns a Map object with the fields of the Task and their values.
+     * 
+     * @return A Map object containing the fields and their values.
+     */
+    Map<String, String> save() {
+        // TODO Make default implementation
     }
 }
